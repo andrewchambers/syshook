@@ -16,8 +16,9 @@ hook the 'open-at' syscall
 $ syshook \
   -e (sys-enter 257 (eprintf "open-at: path=%s" (arg-string 1))) \
   -- cat ./foobar.txt
-open-at: .../lib/librt.so.1
-open-at: .../lib/libc.so.6
+open-at: path=.../lib/librt.so.1
+open-at: path=.../lib/libc.so.6
 ...
-open-at: ./foobar.txt
+open-at: path=./foobar.txt
+foo!
 ```

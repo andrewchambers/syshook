@@ -13,7 +13,7 @@ static JanetFiber *hook_fiber;
 _Noreturn static void
 usage(void)
 {
-  fprintf(stderr, "usage: %s [-o trace-output-file] [-ft] (command | -0 command argv0) [argument] ...\n", argv0);
+  fprintf(stderr, "usage: %s [-e script] [-ft] (command | -0 command argv0) [argument] ...\n", argv0);
   exit(1);
 }
 
